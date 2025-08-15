@@ -3,10 +3,9 @@ layout: home
 title: "Things I Know"
 ---
 
-Welcome to my collection of notes, lessons, and discoveries.  
-Use the **search bar below** or browse by **tags** to find entries.
+Welcome to my collection of notes, lessons, and discoveries.
 
-<input type="text" id="search-input" placeholder="Search...">
+<input type="text" id="search-input" placeholder="Search posts...">
 <ul id="results-container"></ul>
 
 <script src="/assets/js/search.js"></script>
