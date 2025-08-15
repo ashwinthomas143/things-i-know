@@ -1,7 +1,7 @@
 title: "Things I Know"
-description: "A growing list of knowledge, tips, and ideas I've learned."
-author: "YOUR NAME"
-theme: minima
+description: "A growing collection of knowledge and ideas."
+author: "Thomas Ashwin Varghese"
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
