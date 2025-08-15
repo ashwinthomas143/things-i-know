@@ -1,7 +1,0 @@
-things-i-know/
-├── _config.yml         # Site settings
-├── index.md            # Homepage
-├── _posts/             # Knowledge entries
-│   ├── 2025-08-15-first-post.md
-├── about.md            # About page
-├── assets/             # Images
