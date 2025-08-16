@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog
+---
+
+<h2 class="text-3xl font-bold mb-6">Blog</h2>
+
+<input type="text" id="search-input" placeholder="Search posts..." class="w-full p-3 border rounded mb-6">
+
+<ul id="results-container" class="space-y-4"></ul>
+
+<div class="grid md:grid-cols-2 gap-6">
+  {% for post in site.posts %}
+  <a href="{{ post.url }}" class="block p-4 border rounded hover:shadow-lg">
+    <h3 class="text-xl font-semibold">{{ post.title }}</h3>
+    <p class="text-gray-600 dark:text-gray-400">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+  </a>
+  {% endfor %}
+</div>
