@@ -1,18 +1,11 @@
 ---
 layout: home
-title: "Things I Know"
+title: "Welcome to Things I Know"
 ---
 
-Welcome to my collection of notes, lessons, and discoveries.
+# 👋 Hi, I'm Thomas
+This is my personal space for sharing notes, tricks, and ideas worth remembering.
 
-<input type="text" id="search-input" placeholder="Search posts...">
-<ul id="results-container"></ul>
-
-<script src="/assets/js/search.js"></script>
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json'
-  })
-</script>
+- Explore topics I’m learning
+- Read through my notes
+- Discover my “Things I Know”
