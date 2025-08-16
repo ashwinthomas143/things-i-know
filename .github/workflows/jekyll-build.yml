@@ -1,38 +1,12 @@
-name: Build and Deploy Jekyll Site
+title: Things I Know
+email: ashwinthomas1@gmail.com
+description: >- # A simple site to share what I know
+  Notes, tricks, and ideas worth remembering.
+baseurl: "" 
+url: "https://ashwinthomas143.github.io"
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+# Build settings
+theme: minima
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Checkout the repository
-      - uses: actions/checkout@v3
-
-      # Set up Ruby environment
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2 # Compatible with Jekyll 4.4.1
-
-      # Install dependencies using Bundler (no manual gem install)
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
-      # Build the Jekyll site
-      - name: Build site
-        run: bundle exec jekyll build
-
-      # Upload the generated _site as an artifact
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site
-          path: _site
+plugins:
+  - jekyll-seo-tag
