@@ -18,7 +18,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1 # Compatible with Jekyll 4.4.1
+          ruby-version: 3.2 # Compatible with Jekyll 4.4.1
 
       # Install dependencies using Bundler (no manual gem install)
       - name: Install dependencies
