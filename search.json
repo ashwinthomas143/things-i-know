@@ -1,12 +1,14 @@
+---
+layout: none
+---
+
 [
+  {% for post in site.posts %}
   {
-    "title": "My First Knowledge Entry",
-    "url": "/2025-08-15-first-entry.html",
-    "content": "This is my very first entry in Things I Know."
-  },
-  {
-    "title": "Python List Tricks",
-    "url": "/2025-08-15-python-list-tricks.html",
-    "content": "Learned about Python list comprehensions and tips."
-  }
+    "title": "{{ post.title | escape }}",
+    "url": "{{ post.url | absolute_url }}",
+    "date": "{{ post.date | date: '%Y-%m-%d' }}",
+    "content": "{{ post.content | strip_html | strip_newlines | escape }}"
+  } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ]
