@@ -1,12 +1,3 @@
-title: Things I Know
-email: ashwinthomas1@gmail.com
-description: >- # A simple site to share what I know
-  Notes, tricks, and ideas worth remembering.
-baseurl: "" 
-url: "https://ashwinthomas143.github.io"
-
-# Build settings
-theme: minima
-
-plugins:
-  - jekyll-seo-tag
+title: "Things I Know"
+description: "My collection of learnings"
+theme: minima   # GitHub Pages supports this theme out-of-the-box
