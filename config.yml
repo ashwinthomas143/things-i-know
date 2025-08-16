@@ -1,17 +1,19 @@
 title: "Things I Know"
-description: "A growing collection of knowledge and ideas."
-author: "Thomas Ashwin Varghese"
-theme: jekyll-theme-cayman
+description: "A personal collection of knowledge, projects, and my impossible list."
+baseurl: "" 
+url: "https://ashwinthomas143.github.io"
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-paginate: 5
-paginate_path: "/page:num/"
 
-nav:
-  - title: "Home"
-    url: /
-  - title: "About"
-    url: /about/
-  - title: "Tags"
-    url: /tags/
+# Build settings
+markdown: kramdown
+
+# For search.json
+collections:
+  posts:
+    output: true
+
+# Exclude default stuff
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor"]
