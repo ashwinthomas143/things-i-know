@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,18 @@
   <link rel="icon" href="/assets/favicon.ico">
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/index.md">All Posts</a>
-  </nav>
-  <main>
+  <header>
+    <div class="site-title">
+      <a href="/">{{ site.title }}</a>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="/" {% if page.url == '/index.md' %}class="active"{% endif %}>All Posts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main tabindex="-1">
     {{ content }}
   </main>
   <footer>
