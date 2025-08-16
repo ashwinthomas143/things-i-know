@@ -20,7 +20,7 @@ jobs:
         with:
           ruby-version: 3.2 # Compatible with Jekyll 4.4.1
 
-      # Install dependencies using Bundler
+      # Install dependencies using Bundler (no manual gem install)
       - name: Install dependencies
         run: |
           gem install bundler
@@ -30,9 +30,9 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build
 
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Upload the generated _site as an artifact
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          name: site
+          path: _site
